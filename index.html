@@ -1,0 +1,45 @@
+﻿
+
+<link rel="stylesheet" type="text/css" href="1.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+</head>
+<body>
+<div class="Shape"> 
+	<div style="height: 80%;width: 60%;margin-left: 10%;margin-top: 25%;">
+        <div class="ShapeStyle"></div>
+        <div style="margin-top:25%"><a style="font-size:70px;font-family: 'Arial', sans-serif;">Life is so-so</a></div>
+    </div>	
+</div>
+<div class="video-background">
+      <iframe class="videoContainer__video" width="100%" height="100%" src="https://www.youtube.com/embed/gWL080QOqfY?autoplay=1&amp;loop=1;playlist=DPnLAcDhS6A" frameborder="0" allowfullscreen></iframe>
+ </div>
+ </body>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-73378277-10'); </script>
+    <audio id="leson" src="music/music.mp3" autoplay="true" hidden="true" loop="true"/>
+		<script>
+	
+
+    var play = false;
+    var myAudio = document.getElementById("leson");
+    
+    myAudio.volume = 0.1;
+	
+	
+    function onKeyDown(event) {
+            switch (event.keyCode) {
+                case 32: //SpaceBar                    
+                    if (play) {
+                        myAudio.pause();
+                        play = false;
+                    } else {
+                        myAudio.play();
+                        play = true;
+                    }
+                    break;
+            }
+      return false;
+    }
+    window.addEventListener("keydown", onKeyDown, false);
+    </script>
+</body>
+</html>
